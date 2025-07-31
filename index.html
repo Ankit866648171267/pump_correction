@@ -34,10 +34,10 @@
             let f2 = parseFloat(document.getElementById('f2').value);
 
             let delta = (pump - motor) / 2.0;
-            let correctionFactor = pump/2;
+            let correctionFactor = -pump/2;
 
-            let shimF1 = ((delta * f1) / dbse) - correctionFactor;
-            let shimF2 = ((delta * f2) / dbse) - correctionFactor;
+            let shimF1 = ((delta * f1) / dbse) +correctionFactor;
+            let shimF2 = ((delta * f2) / dbse) +correctionFactor;
 
             document.getElementById('resultF1').innerText = "correction for F1: " + shimF1.toFixed(3);
             document.getElementById('resultF2').innerText = "correction for F2: " + shimF2.toFixed(3);
