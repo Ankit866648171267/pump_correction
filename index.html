@@ -34,7 +34,7 @@
             let f2 = parseFloat(document.getElementById('f2').value);
 
             let delta = (pump - motor) / 2.0;
-            let correctionFactor = 0.13;
+            let correctionFactor = pump/2;
 
             let shimF1 = ((delta * f1) / dbse) - correctionFactor;
             let shimF2 = ((delta * f2) / dbse) - correctionFactor;
